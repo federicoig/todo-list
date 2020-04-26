@@ -1,0 +1,43 @@
+
+$font-roboto: 'Roboto', sans-serif;
+$blue-grey: #37474f;
+$darker-blue-grey: #102027;
+$light-grey: #e0e0e0;
+
+.title {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: $darker-blue-grey;
+    span {
+        font: 400% $font-roboto;
+        color: $light-grey;
+        margin-left: 4%;
+
+    }
+    p {
+        font: 135% $font-roboto;
+        color: $light-grey;
+        margin-top: 2.48%;
+        margin-right: 4%;
+    }
+}
+
+body {
+    margin: 0%;
+    background-color: $blue-grey;
+}
+
+form {
+    text-align: center;
+    input {
+        outline: none;
+        background-color: $blue-grey;
+        margin-top: 2%;
+        width: 30%;
+        padding: 1%;
+        border: none;
+        border-bottom: 4px solid #0d191f;
+        border-radius: 3.5%;
+
+    }
+}
