@@ -4,6 +4,12 @@ $blue-grey: #37474f;
 $darker-blue-grey: #102027;
 $light-grey: #e0e0e0;
 
+@media (max-width: 600px) {
+    .title {
+        display: block;
+    }
+}
+
 .title {
     display: grid;
     grid-template-columns: 50% 50%;
