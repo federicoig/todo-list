@@ -4,21 +4,16 @@ $blue-grey: #37474f;
 $darker-blue-grey: #102027;
 $light-grey: #e0e0e0;
 
-@media (max-width: 600px) {
-    .title {
-        display: block;
-    }
-}
-
 .title {
     display: grid;
     grid-template-columns: 50% 50%;
     background-color: $darker-blue-grey;
-    span {
+    h2 {
         font: 400% $font-roboto;
         color: $light-grey;
         margin-left: 4%;
-
+        margin-top: 0.7%;
+        margin-bottom: 3%;
     }
     p {
         font: 135% $font-roboto;
@@ -33,17 +28,95 @@ body {
     background-color: $blue-grey;
 }
 
-form {
+.form {
     text-align: center;
     input {
         outline: none;
         background-color: $blue-grey;
-        margin-top: 2%;
+        margin-top: 3%;
         width: 30%;
-        padding: 1%;
+        padding: 0.5%;
         border: none;
         border-bottom: 4px solid #0d191f;
         border-radius: 3.5%;
-
+    }
+    input[type="text"]{
+        font: 130% $font-roboto;
+        color: $light-grey
+    }
+    button {
+        cursor: pointer;
+        outline: none;
+        padding: 1%;
+        margin-left: 1%;
+        border: none;
+        background-color: $light-grey;
+        border-radius: 10px;
+        font: $font-roboto;
+    }
+    .clicked-button {
+        padding: 0.9%;
+        background-color: #00c853;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0.5px 0.5px 0.5px 2px $darker-blue-grey;
+    }
+    .unclick-button {
+        padding: 1%;
+        box-shadow: 0px;
+        transition: 0.3s;
+        background-color: $light-grey;
     }
 }
+
+#to-do-list {
+    text-align: center;
+    p {
+        display: inline-block;
+        background-color:  #1a333d;
+        width: 40%;
+        color: $light-grey;
+        font: 110% $font-roboto;
+        padding: 2%;
+    }
+}
+
+@media (max-width: 450px) and (max-height: 850px) {
+    .title {
+        display: block;
+        h2 {
+            font-size: 350%;    
+        }
+        p {
+            font-size: 110%;
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+    }
+    .form {
+        input {
+            width: 50%;
+
+        }
+        input[type="text"]{
+            font-size: 90%;
+            padding-bottom: 1%;
+        }
+        button{
+            padding: 2%;
+        }
+        .clicked-button {
+            padding: 1.9%;
+            background-color: #00c853;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0.5px 0.5px 0.5px 2px $darker-blue-grey;
+        }
+        .unclick-button {
+            padding: 2%;
+            box-shadow: 0px;
+            transition: 0.3s;
+            background-color: $light-grey;
+        }
+        
+    }
+}
+
