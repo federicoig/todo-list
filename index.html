@@ -9,12 +9,20 @@
 </head>
 <body>
     <div class="title">
-        <span>The basic to-do list!</span>
-        <p>Add here your to-do activities, you can check them, or just delete them later!</p>
+        <h2>The basic to-do list!</h2>
+        <p>Put here your to-do activities, you can check them out, or just delete them later!</p>
     </div>
-    <form>
-        <input><button type="button">Add</button>
-    </form>
+    <div>
+        <div class="form">
+            <input id="activity" type="text">
+            <button onclick="addActivities(this), addAnimation(this)" type="button">Add</button>
+        </div>
+    </div>
+    <div>
+        <div id="to-do-list">
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
 
