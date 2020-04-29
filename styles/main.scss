@@ -1,8 +1,8 @@
-
 $font-roboto: 'Roboto', sans-serif;
 $blue-grey: #37474f;
 $darker-blue-grey: #102027;
 $light-grey: #e0e0e0;
+$light-green: #00c853;
 
 .title {
     display: grid;
@@ -28,6 +28,8 @@ body {
     background-color: $blue-grey;
 }
 
+////////////////////////////////////////////
+
 .form {
     text-align: center;
     input {
@@ -45,39 +47,59 @@ body {
         color: $light-grey
     }
     button {
+        position: absolute;
         cursor: pointer;
         outline: none;
         padding: 1%;
         margin-left: 1%;
+        margin-top: 2.85%;
         border: none;
         background-color: $light-grey;
         border-radius: 10px;
-        font: $font-roboto;
+        font: 101% $font-roboto;
     }
     .clicked-button {
         padding: 0.9%;
-        background-color: #00c853;
-        transition: 0.3s ease-in-out;
+        background-color: $light-green;
+        transition: 0.2s ease-in-out;
         box-shadow: 0.5px 0.5px 0.5px 2px $darker-blue-grey;
     }
     .unclick-button {
         padding: 1%;
         box-shadow: 0px;
-        transition: 0.3s;
+        transition: 0.2s;
         background-color: $light-grey;
     }
 }
 
 #to-do-list {
-    text-align: center;
-    p {
+    display: block;
+    text-align: center;  
+    .to-do {
         display: inline-block;
-        background-color:  #1a333d;
-        width: 40%;
+        text-align: left;
+        background-color: #00363a;
+        width: 44%;
         color: $light-grey;
-        font: 110% $font-roboto;
-        padding: 2%;
+        font: 120% $font-roboto;
+        padding: 1%;
+        border-radius: 6px;
     }
+    .fa-check {
+        cursor: pointer;
+        margin-left: 2%;
+    }
+    .fa-trash {
+        cursor: pointer;
+        margin-left: 2%;
+    }
+}
+
+.to-do-cross-out {
+    transition: 0.3s ease-in;
+    padding: 1.5%;
+    background-color: $light-green;
+    text-decoration: line-through;
 }
 
 @media (max-width: 450px) and (max-height: 850px) {
@@ -95,7 +117,6 @@ body {
     .form {
         input {
             width: 50%;
-
         }
         input[type="text"]{
             font-size: 90%;
@@ -103,20 +124,20 @@ body {
         }
         button{
             padding: 2%;
+            margin-left: 3%;
         }
         .clicked-button {
             padding: 1.9%;
             background-color: #00c853;
-            transition: 0.3s ease-in-out;
+            transition: 0.2s ease-in-out;
             box-shadow: 0.5px 0.5px 0.5px 2px $darker-blue-grey;
         }
         .unclick-button {
             padding: 2%;
             box-shadow: 0px;
-            transition: 0.3s;
+            transition: 0.2s;
             background-color: $light-grey;
         }
-        
     }
 }
 
