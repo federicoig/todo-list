@@ -2,7 +2,8 @@ $font-roboto: 'Roboto', sans-serif;
 $blue-grey: #37474f;
 $darker-blue-grey: #102027;
 $light-grey: #e0e0e0;
-$light-green: #00c853;
+$material-green: #00c853;
+$material-red: #f44336;
 
 .title {
     display: grid;
@@ -30,12 +31,14 @@ body {
 
 ////////////////////////////////////////////
 
-.form {
-    text-align: center;
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
     input {
         outline: none;
         background-color: $blue-grey;
-        margin-top: 3%;
         width: 30%;
         padding: 0.5%;
         border: none;
@@ -47,74 +50,79 @@ body {
         color: $light-grey
     }
     button {
-        position: absolute;
         cursor: pointer;
         outline: none;
         padding: 1%;
-        margin-left: 1%;
-        margin-top: 2.85%;
         border: none;
+        margin-left: 2%;
         background-color: $light-grey;
         border-radius: 10px;
         font: 101% $font-roboto;
-    }
-    .clicked-button {
-        padding: 0.9%;
-        background-color: $light-green;
-        transition: 0.2s ease-in-out;
-        box-shadow: 0.5px 0.5px 0.5px 2px $darker-blue-grey;
-    }
-    .unclick-button {
-        padding: 1%;
-        box-shadow: 0px;
-        transition: 0.2s;
-        background-color: $light-grey;
-    }
-}
+        transition: 0.3s ease-in;
 
-#to-do-list {
-    display: block;
-    text-align: center;  
-    .to-do {
-        display: inline-block;
-        text-align: left;
-        background-color: #00363a;
-        width: 44%;
+    }
+    button:hover{
         color: $light-grey;
-        font: 120% $font-roboto;
-        padding: 1%;
-        border-radius: 6px;
+        background-color: $darker-blue-grey;
     }
-    .fa-check {
-        cursor: pointer;
-        margin-left: 2%;
-    }
-    .fa-trash {
-        cursor: pointer;
-        margin-left: 2%;
+    .clicked-button:not():hover {
+        color: $darker-blue-grey;
+        background-color: $light-grey;
+        transition: 0.2s ease-in-out;
     }
 }
 
-.to-do-cross-out {
-    transition: 0.3s ease-in;
-    padding: 1.5%;
-    background-color: $light-green;
-    text-decoration: line-through;
+.todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5%;
+    opacity: 1;
+    transition: opacity 700ms ease;
+    .newTodo{
+        list-style: none;
+        background: $darker-blue-grey;
+        color: $light-grey;
+        font: 130% $font-roboto;
+        padding: 1.5%;
+        width: 40%;
+    }
+    .complete-button, 
+    .delete-button {
+        cursor: pointer;
+        padding: 1.66%;
+        background: $light-grey;
+        font-size: 115%;
+        transition: 0.2s ease-in;
+    }
+    i.complete-button:hover {
+        color: $light-grey;
+        background: $material-green;
+    } 
+    i.delete-button:hover {
+        color: $light-grey;
+        background: $material-red;
+    }
 }
 
 @media (max-width: 450px) and (max-height: 850px) {
     .title {
         display: block;
+        margin: 0.5%;
         h2 {
-            font-size: 350%;    
+            font-size: 250%;    
         }
         p {
-            font-size: 110%;
+            font-size: 105%;
             padding-bottom: 5%;
             margin-left: 5%;
         }
     }
-    .form {
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
         input {
             width: 50%;
         }
@@ -126,18 +134,38 @@ body {
             padding: 2%;
             margin-left: 3%;
         }
-        .clicked-button {
-            padding: 1.9%;
-            background-color: #00c853;
-            transition: 0.2s ease-in-out;
-            box-shadow: 0.5px 0.5px 0.5px 2px $darker-blue-grey;
+        .clicked-button:active {
+            color: $light-grey;
+            background-color: $darker-blue-grey;
         }
-        .unclick-button {
-            padding: 2%;
-            box-shadow: 0px;
-            transition: 0.2s;
-            background-color: $light-grey;
+    }
+    .todo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-right: 8%;
+        .newTodo{
+            width: 80%;
+            padding: 2.44%;
+            font-size: 105%;
+        }
+        .complete-button, .delete-button {
+            border: none;
+            font-size: 89%;
+            padding: 3%;
+        }
+        i.complete-button:active {
+            color: $light-grey;
+            background: $material-green;
+        } 
+        i.delete-button:active {
+            color: $light-grey;
+            background: $material-red;
         }
     }
 }
 
+.fa-check, .fa-trash {
+    pointer-events: none;
+}
