@@ -1,6 +1,7 @@
 .title {
   display: -ms-grid;
   display: grid;
+  grid-column: auto;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
   background-color: #102027;
@@ -67,16 +68,17 @@ form button {
   transition: 0.3s ease-in;
 }
 
-form button:hover {
-  color: #e0e0e0;
-  background-color: #102027;
-}
-
-form .clicked-button:not():hover {
-  color: #102027;
-  background-color: #e0e0e0;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
+@media (hover: hover) {
+  form button:hover {
+    color: #e0e0e0;
+    background-color: #102027;
+  }
+  form .clicked-button:not():hover {
+    color: #102027;
+    background-color: #e0e0e0;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
 }
 
 .todo {
@@ -114,14 +116,15 @@ form .clicked-button:not():hover {
   transition: 0.2s ease-in;
 }
 
-.todo i.complete-button:hover {
-  color: #e0e0e0;
-  background: #00c853;
-}
-
-.todo i.delete-button:hover {
-  color: #e0e0e0;
-  background: #f44336;
+@media (hover: hover) {
+  .todo i.complete-button:hover {
+    color: #e0e0e0;
+    background: #00c853;
+  }
+  .todo i.delete-button:hover {
+    color: #e0e0e0;
+    background: #f44336;
+  }
 }
 
 @media (max-width: 450px) and (max-height: 850px) {
@@ -147,22 +150,18 @@ form .clicked-button:not():hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 10%;
+    margin-top: 13%;
   }
   form input {
-    width: 50%;
+    width: 60%;
   }
   form input[type="text"] {
     font-size: 90%;
     padding-bottom: 1%;
   }
   form button {
-    padding: 2%;
+    padding: 3%;
     margin-left: 3%;
-  }
-  form .clicked-button:active {
-    color: #e0e0e0;
-    background-color: #102027;
   }
   .todo {
     display: -webkit-box;
@@ -174,26 +173,18 @@ form .clicked-button:not():hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 2%;
-    margin-right: 8%;
+    margin-top: 8%;
+    margin-right: 15%;
   }
   .todo .newTodo {
     width: 80%;
-    padding: 2.44%;
+    padding: 5%;
     font-size: 105%;
   }
   .todo .complete-button, .todo .delete-button {
     border: none;
     font-size: 89%;
-    padding: 3%;
-  }
-  .todo i.complete-button:active {
-    color: #e0e0e0;
-    background: #00c853;
-  }
-  .todo i.delete-button:active {
-    color: #e0e0e0;
-    background: #f44336;
+    padding: 5.5%;
   }
 }
 
