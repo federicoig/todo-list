@@ -7,7 +7,8 @@ $material-red: #f44336;
 
 .title {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-column: auto;
+    grid-template-columns: 50% 50% ;
     background-color: $darker-blue-grey;
     h2 {
         font: 400% $font-roboto;
@@ -61,14 +62,16 @@ form {
         transition: 0.3s ease-in;
 
     }
-    button:hover{
-        color: $light-grey;
-        background-color: $darker-blue-grey;
-    }
-    .clicked-button:not():hover {
-        color: $darker-blue-grey;
-        background-color: $light-grey;
-        transition: 0.2s ease-in-out;
+    @media (hover: hover){
+        button:hover{
+            color: $light-grey;
+            background-color: $darker-blue-grey;
+        }
+        .clicked-button:not():hover {
+            color: $darker-blue-grey;
+            background-color: $light-grey;
+            transition: 0.2s ease-in-out;
+        }
     }
 }
 
@@ -95,13 +98,15 @@ form {
         font-size: 115%;
         transition: 0.2s ease-in;
     }
-    i.complete-button:hover {
-        color: $light-grey;
-        background: $material-green;
-    } 
-    i.delete-button:hover {
-        color: $light-grey;
-        background: $material-red;
+    @media (hover: hover) {
+        i.complete-button:hover {
+            color: $light-grey;
+            background: $material-green;
+        } 
+        i.delete-button:hover {
+            color: $light-grey;
+            background: $material-red;
+        }
     }
 }
 
@@ -122,46 +127,34 @@ form {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10%;
+        margin-top: 13%;
         input {
-            width: 50%;
+            width: 60%;
         }
         input[type="text"]{
             font-size: 90%;
             padding-bottom: 1%;
         }
         button{
-            padding: 2%;
+            padding: 3%;
             margin-left: 3%;
-        }
-        .clicked-button:active {
-            color: $light-grey;
-            background-color: $darker-blue-grey;
         }
     }
     .todo {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 2%;
-        margin-right: 8%;
+        margin-top: 8%;
+        margin-right: 15%;
         .newTodo{
             width: 80%;
-            padding: 2.44%;
+            padding: 5%;
             font-size: 105%;
         }
         .complete-button, .delete-button {
             border: none;
             font-size: 89%;
-            padding: 3%;
-        }
-        i.complete-button:active {
-            color: $light-grey;
-            background: $material-green;
-        } 
-        i.delete-button:active {
-            color: $light-grey;
-            background: $material-red;
+            padding: 5.5%;
         }
     }
 }
