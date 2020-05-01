@@ -129,6 +129,7 @@ form button {
 
 @media (max-width: 450px) and (max-height: 850px) {
   .title {
+    background: #102027;
     display: block;
     margin: 0.5%;
   }
