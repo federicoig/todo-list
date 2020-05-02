@@ -16,6 +16,10 @@ function addActivities(){
     if (activity.value === ""){
         console.log("ERROR")
     }
+    else if (!activity.value.trim().length){
+        console.log("ERROR")
+        activity.value = ""
+    }
     else {
         //Todo DIV
         const todoDiv = document.createElement("div")
