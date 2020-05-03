@@ -317,7 +317,7 @@ form {
         .logo-title {
             text-align: center;
             .title {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
         }    
         p {
@@ -359,7 +359,15 @@ form {
     }
 }
 
-
+@media screen and (max-width: 330px){
+    header{
+        .logo-title{
+            .title{
+                font-size: 2em;
+            }
+        }
+    }
+}
 
 .fa-check, .fa-trash {
     pointer-events: none;
