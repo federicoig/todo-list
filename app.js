@@ -26,7 +26,7 @@ function addActivities(){
         todoDiv.classList.add("todo")
         //Create li
         const newTodo = document.createElement("li")
-        newTodo.classList.add("newTodo")
+        newTodo.classList.add("new-todo")
         newTodo.innerText = activity.value
         todoDiv.appendChild(newTodo)
         //Check button
@@ -77,4 +77,3 @@ function addButton(event){
         event.preventDefault() 
     }   
 }
-

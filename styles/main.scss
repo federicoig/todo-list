@@ -14,11 +14,10 @@ header {
         display: flex;
         margin: 1%;
         img{
-            filter:invert(96%) sepia(20%) saturate(4%) hue-rotate(284deg) brightness(108%) contrast(76%);
             width: 10%;
             justify-content: flex-end;
         }
-        h2 {
+        .title {
             font: 4em $font-roboto;
             color: $light-grey;
             margin: 0;
@@ -92,24 +91,25 @@ form {
     margin-top: 1.5%;
     opacity: 1;
     transition: opacity 700ms ease;
-    .newTodo{
+    .new-todo{
         list-style: none;
         background: $darker-blue-grey;
         color: $light-grey;
-        font: 130% $font-roboto;
         padding: 1.5%;
+        font: 130% $font-roboto;
         width: 40%;
-        min-height: 100%;
+        overflow-y: auto
     }
     .complete-button, 
     .delete-button {
+        display: inline-block;
         cursor: pointer;
-        padding: 1.66%;
-        height: 100%;
         background: $light-grey;
         font-size: 115%;
+        height: 100%;
         transition: 0.2s ease-in;
     }
+
     @media (hover: hover) {
         i.complete-button:hover {
             color: $light-grey;
@@ -126,17 +126,19 @@ form {
 
     header {
         flex-direction: column;
+
         .logo-title{
             text-align: center;
-            align-items: center;
-            h2{
-                font-size: 5.5em;
-                display: inline-block;
+            align-items: center;   
+            margin-bottom: -1%;
+            display: inline-block;
+     
+            .title{
+                font-size: 5em;
             }
             img{
                 width: 8%;
             }
-
         }
         p {
             font-size: 1.5em;
@@ -153,7 +155,7 @@ form {
         display: flex;
         justify-content: center;
         align-items: center;
-        .newTodo{
+        .new-todo{
             width: 60%;
         }
     }
@@ -166,7 +168,7 @@ form {
         .logo-title{
             text-align: center;
             align-items: center;
-            h2{
+            .title{
                 font-size: 5em;
             }
         }
@@ -185,7 +187,7 @@ form {
         display: flex;
         justify-content: center;
         align-items: center;
-        .newTodo{
+        .new-todo{
             width: 60%;
         }
     }
@@ -197,7 +199,7 @@ form {
         .logo-title{
             text-align: center;
             align-items: center;
-            h2{
+            .title{
                 font-size: 4em;
             }
             
@@ -217,7 +219,7 @@ form {
         display: flex;
         justify-content: center;
         align-items: center;
-        .newTodo{
+        .new-todo{
             width: 60%;
         }
     }
@@ -230,8 +232,8 @@ form {
         .logo-title{
             text-align: center;
             align-items: center;
-            h2{
-                font-size: 3em;
+            .title{
+                font-size: 3.1em;
             }
             img{
                 width: 10%;
@@ -247,12 +249,13 @@ form {
         input{
             width: 50%;
         }
+
     }
     .todo{
         display: flex;
         justify-content: center;
         align-items: center;
-        .newTodo{
+        .new-todo{
             width: 60%;
         }
     }
@@ -264,8 +267,8 @@ form {
         justify-content: center;
         .logo-title {
             text-align: center;
-            h2 {
-                font-size: 2.6em;
+            .title {
+                font-size: 2.5em;
             }
         }    
         p {
@@ -295,7 +298,7 @@ form {
         align-items: center;
         margin-top: 8%;
         margin-right: 15%;
-        .newTodo{
+        .new-todo{
             width: 85%;
             padding: 5%;
             font-size: 1.1em;
@@ -313,9 +316,8 @@ form {
         justify-content: center;
         .logo-title {
             text-align: center;
-
-            h2 {
-                font-size: 2.1em;
+            .title {
+                font-size: 2.5em;
             }
         }    
         p {
@@ -345,7 +347,7 @@ form {
         align-items: center;
         margin-top: 8%;
         margin-right: 15%;
-        .newTodo{
+        .new-todo{
             width: 85%;
             padding: 5%;
             font-size: 1.1em;

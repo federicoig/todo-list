@@ -19,15 +19,13 @@ header .logo-title {
 }
 
 header .logo-title img {
-  -webkit-filter: invert(96%) sepia(20%) saturate(4%) hue-rotate(284deg) brightness(108%) contrast(76%);
-          filter: invert(96%) sepia(20%) saturate(4%) hue-rotate(284deg) brightness(108%) contrast(76%);
   width: 10%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-header .logo-title h2 {
+header .logo-title .title {
   font: 4em "Roboto", sans-serif;
   color: #e0e0e0;
   margin: 0;
@@ -36,7 +34,7 @@ header .logo-title h2 {
           flex: 1;
 }
 
-header .logo-title h2 span {
+header .logo-title .title span {
   color: cadetblue;
 }
 
@@ -120,23 +118,23 @@ form button {
   transition: opacity 700ms ease;
 }
 
-.todo .newTodo {
+.todo .new-todo {
   list-style: none;
   background: #102027;
   color: #e0e0e0;
-  font: 130% "Roboto", sans-serif;
   padding: 1.5%;
+  font: 130% "Roboto", sans-serif;
   width: 40%;
-  min-height: 100%;
+  overflow-y: auto;
 }
 
 .todo .complete-button,
 .todo .delete-button {
+  display: inline-block;
   cursor: pointer;
-  padding: 1.66%;
-  height: 100%;
   background: #e0e0e0;
   font-size: 115%;
+  height: 100%;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
 }
@@ -164,10 +162,11 @@ form button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  header .logo-title h2 {
-    font-size: 5.5em;
+    margin-bottom: -1%;
     display: inline-block;
+  }
+  header .logo-title .title {
+    font-size: 5em;
   }
   header .logo-title img {
     width: 8%;
@@ -193,7 +192,7 @@ form button {
         -ms-flex-align: center;
             align-items: center;
   }
-  .todo .newTodo {
+  .todo .new-todo {
     width: 60%;
   }
 }
@@ -211,7 +210,7 @@ form button {
         -ms-flex-align: center;
             align-items: center;
   }
-  header .logo-title h2 {
+  header .logo-title .title {
     font-size: 5em;
   }
   header p {
@@ -235,7 +234,7 @@ form button {
         -ms-flex-align: center;
             align-items: center;
   }
-  .todo .newTodo {
+  .todo .new-todo {
     width: 60%;
   }
 }
@@ -253,7 +252,7 @@ form button {
         -ms-flex-align: center;
             align-items: center;
   }
-  header .logo-title h2 {
+  header .logo-title .title {
     font-size: 4em;
   }
   header p {
@@ -276,7 +275,7 @@ form button {
         -ms-flex-align: center;
             align-items: center;
   }
-  .todo .newTodo {
+  .todo .new-todo {
     width: 60%;
   }
 }
@@ -294,8 +293,8 @@ form button {
         -ms-flex-align: center;
             align-items: center;
   }
-  header .logo-title h2 {
-    font-size: 3em;
+  header .logo-title .title {
+    font-size: 3.1em;
   }
   header .logo-title img {
     width: 10%;
@@ -320,7 +319,7 @@ form button {
         -ms-flex-align: center;
             align-items: center;
   }
-  .todo .newTodo {
+  .todo .new-todo {
     width: 60%;
   }
 }
@@ -338,8 +337,8 @@ form button {
   header .logo-title {
     text-align: center;
   }
-  header .logo-title h2 {
-    font-size: 2.6em;
+  header .logo-title .title {
+    font-size: 2.5em;
   }
   header p {
     font-size: 0.9em;
@@ -380,7 +379,7 @@ form button {
     margin-top: 8%;
     margin-right: 15%;
   }
-  .todo .newTodo {
+  .todo .new-todo {
     width: 85%;
     padding: 5%;
     font-size: 1.1em;
@@ -404,8 +403,8 @@ form button {
   header .logo-title {
     text-align: center;
   }
-  header .logo-title h2 {
-    font-size: 2.1em;
+  header .logo-title .title {
+    font-size: 2.5em;
   }
   header p {
     font-size: 0.9em;
@@ -446,7 +445,7 @@ form button {
     margin-top: 8%;
     margin-right: 15%;
   }
-  .todo .newTodo {
+  .todo .new-todo {
     width: 85%;
     padding: 5%;
     font-size: 1.1em;
