@@ -134,7 +134,7 @@ form button {
   cursor: pointer;
   background: #e0e0e0;
   font-size: 115%;
-  height: 100%;
+  padding: 1.66%;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
 }
