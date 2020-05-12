@@ -106,7 +106,7 @@ form {
         cursor: pointer;
         background: $light-grey;
         font-size: 115%;
-        height: 100%;
+        padding: 1.66%;
         transition: 0.2s ease-in;
     }
 
@@ -126,13 +126,11 @@ form {
 
     header {
         flex-direction: column;
-
         .logo-title{
             text-align: center;
             align-items: center;   
             margin-bottom: -1%;
             display: inline-block;
-     
             .title{
                 font-size: 5em;
             }
